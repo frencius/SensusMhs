@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Sensus Mahasiswa Katolik - Gema Bandung</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  	body {
+	    /*background-color: #f6f6f6;*/ 
+        background: url('tekabara.jpg') no-repeat fixed;
+	    background-size: cover;
+	}
+
+
+	.heading, .footer {
+		padding: 30px;
+	}
+
+	.center {
+	    margin: auto;
+	    width: 60%;
+	    text-align: center;
+	}
+
+	/*Navbar*/
+	.navbar {
+		padding: 5px 5px;
+	    font-size: 16px;
+	    letter-spacing: 2px;
+	    background-color: #3071A9;
+	    opacity:1;
+	}
+
+	.navbar-nav li a:hover, .navbar-header a:hover {
+	    color: #000000 !important;
+	}
+
+	.navbar li a, .navbar .navbar-brand { 
+	    color: #ffffff !important;
+	}
+
+	/*Button*/
+	.btn {
+      padding: 10px 20px;
+      background-color: #3071A9;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  	}
+
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #1da7c6;
+      color: #000;
+  }
+
+	/*Modal*/
+    .modal-header {
+      background-color: #3071A9;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .modal-header, .modal-body {
+      padding: 40px 50px;
+    }
+
+    /*Panel*/
+
+    .panel {
+	  margin: 30px;
+	  background: transparent;
+
+	}
+
+    
+	/* Custom, iPhone Retina */ 
+	@media (min-width: 320px) {
+ 	   body {font-size: 10px;}
+ 	   h2 {font-size: 14px;}
+ 	   h4 {font-size: 12px;}
+ 	   h5 {font-size: 10px;}
+		.center {
+	    width: 100%;
+		} 	   
+
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media (min-width: 480px) {
+ 	   body{font-size: 12px;}
+ 	   h2 {font-size: 18px;}
+ 	   h4 {font-size: 16px;}
+ 	   h5 {font-size: 14px;}
+ 	   .center {
+	    	width: 100%;
+		}
+	}
+
+	/* Small Devices, Tablets */
+	@media (min-width: 768px) {
+ 	   body{font-size: 14px;}
+ 	   h2 {font-size: 22px;}
+ 	   h4 {font-size: 20px;}
+ 	   h5 {font-size: 18px;}
+ 	   .center {
+	    	width: 80%;
+		}
+	}
+
+	/* Medium Devices, Desktops */
+    @media (min-width : 992px) {
+ 	   body{font-size: 16px;}
+ 	   h2 {font-size: 24px;}
+ 	   h4 {font-size: 22px;}
+ 	   h5 {font-size: 20px;}
+ 	   .center {
+	    	width: 70%;
+		}
+    }
+
+    /* Large Devices, Wide Screens */
+    @media (min-width : 1200px) {
+ 	   body{font-size: 14px;}
+ 	   h2 {font-size: 24px;}
+ 	   h4 {font-size: 22px;}
+ 	   h5 {font-size: 20px;}
+ 	   .center {
+	    	width: 65%;
+		}
+    }
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-nav">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span><strong> Gema Bandung</strong></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span><strong> Login</strong></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<br><br>
+
+<div class="container center">
+	<div class="panel panel-primary">
+      <div class="panel-heading"><strong><h3>Sensus Mahasiswa Katolik se-Bandung Raya</h3></strong></div>
+      <div class="panel-body">
+      	<div class="row">
+      		<div class="col-sm-4">Icon Gema</div>
+  			<div class="col-sm-8">
+  				<form>
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				    <input id="nama" type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+				    <input id="alamatAsal" type="text" class="form-control" name="alamatAsal" placeholder="Alamat Asal" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+				    <input id="alamatBandung" type="text" class="form-control" name="alamatBandung" placeholder="Alamat di Bandung" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+				    <input id="asalKMK" type="text" class="form-control" name="asalKMK" placeholder="Asal KMK" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+				    <input id="noHP" type="text" class="form-control" name="noHP" placeholder="No Handphone">
+				  </div>
+
+				  <hr>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				    <input id="email" type="email" class="form-control" name="email" placeholder="Email" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+				    <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+				  </div><br>
+
+				  <div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+				    <input id="password" type="password" class="form-control" name="password" placeholder="Konfirmasi Password" required>
+				  </div><br>
+
+	              <button type="submit" class="btn btn-block">Daftar <span class="glyphicon glyphicon-ok"></span></button>
+	              <button type="submit" class="btn btn-block">Batal <span class="glyphicon glyphicon-remove"></span></button>
+	          </form>
+  			</div>
+		</div>
+      </div>
+	</div>
+
+	<div class="footer">
+		<p>Produksi GITC - 2017</p>
+	</div>
+
+
+
+	  <!-- Modal Login -->
+  <div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Masuk</h4>
+        </div>
+        <div class="modal-body">
+        <form>
+			  <div class="input-group">
+			    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			    <input id="email" type="text" class="form-control" name="email" placeholder="Email" required>
+			  </div><br>
+			  <div class="input-group">
+			    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+			    <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+			  </div><br>
+              <button type="submit" class="btn btn-block">Login <span class="glyphicon glyphicon-log-in"></span></button>
+              <button type="submit" class="btn btn-block">Batal <span class="glyphicon glyphicon-remove"></span></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        	<p align="center"><a href="#" data-toggle="modal" data-target="#lupaPassModal"> Lupa password? </a> atau <a href="#">Belum punya akun?</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal Lupa Password -->
+  <div class="modal fade" id="lupaPassModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Lupa Password</h4>
+        </div>
+        <div class="modal-body">
+        <form>
+			  <div class="input-group">
+			    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			    <input id="email" type="text" class="form-control" name="email" placeholder="Masukkan Email Kamu" required>
+			  </div><br>
+
+              <button type="submit" class="btn btn-block" data-toggle="modal" data-target="#kirimEmailModal">Kirim Reset Password <span class="glyphicon glyphicon-send"></span></button>
+              
+              <button type="submit" class="btn btn-block">Batal <span class="glyphicon glyphicon-remove"></span></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+    <!-- Modal Email Terkirim -->
+  <div class="modal fade" id="kirimEmailModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Cek email kamu sekarang..</h4>
+        </div>
+        <div class="modal-body">
+        <p>Link reset password sudah dikirim ke email kamu.</p>
+        </div>
+        <div class="modal-footer">
+        	<button type="submit" class="btn btn-block">Close <span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
